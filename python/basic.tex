@@ -1,0 +1,199 @@
+\documentclass{article}%
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{deeporange}{rgb}{1, 0.549, 0}
+\definecolor{deeppurple}{rgb}{0.471, 0.314, 0.663}
+\definecolor{bgcolor}{rgb}{0.95,0.95,0.92}
+\usepackage{listings}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+backgroundcolor=\color{bgcolor},
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deeppurple},
+emph={[1] for, in, if, else, },          % Custom highlighting
+emph={[2]exampleFunction},          % Custom highlighting
+emphstyle=\ttb\color{deeporange},    % Custom highlighting style
+emphstyle=[2]\ttb\color{deepblue},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false,            % 
+breakatwhitespace=false,
+breaklines=true,
+captionpos=b,
+keepspaces=true,
+numbers=left,
+showtabs=false,
+tabsize=4
+}}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+%
+%
+\title{Utbildningsplan Python}
+\author{Mats Larsson}
+\begin{document}%
+
+\maketitle
+\normalsize%
+\section{Lektion 1}%
+\paragraph{Presentera mig själv}
+\paragraph{Gå igenom utbildningsplanen de kommande veckorna}
+\subsection{Python}
+\begin{itemize}
+\item Världens populäraste programmeringsspråk
+\item Lätt att lära sig
+\item Python 2 och python 3
+\end{itemize}
+
+TODO: slides
+\subsection{IDLE}
+IDLE är pythons egna editor. En skribent använder Word och en programmerare använder IDLE, eller
+någon annan av de hundratals olika editorer. IDLE består av två olika fönster: skalet och filen.
+I filen skriver vi koden och i skalet input och outputs. 
+
+
+\begin{python}[language=Python, caption=Hello World]
+print("Hello World!")
+
+\end{python}
+
+
+\subsection{Zifro}
+www.zifro.se/hello/
+\subsubsection{Styr Podden}
+
+\begin{python}[language=Python, caption=for-loop]
+for i in range(5):
+    print(i)
+ 
+\end{python}
+
+\subsubsection{Räkna varor}
+
+\begin{python}[language=Python, caption=Variabler] 
+x = 3+4 
+y = 6/2
+z = 2*3
+print(x+y-z)
+\end{python}
+
+\Large I python skrivs multiplikationstecknet \textbf{$\cdot$} som * \hfill
+\normalsize
+
+\begin{python}[language=Python, caption=Ökad mängd] 
+exempel = 0
+
+for i in range(5):
+    exempel = exempel + i
+
+print(exempel)
+\end{python}
+
+\subsubsection{Sortera varorna}
+
+\begin{python}[language=Python, caption=if-satser]
+if(3 == 3):
+    print("Foo")
+else:
+    print("Bar")
+\end{python}
+
+\subsection{Slack}
+TODO: workspace
+
+
+\section{Lektion 2}
+\subsection{Repitition}
+\begin{itemize}
+\item variabler
+\item for-loopar
+\item if-satser
+\end{itemize}
+
+\subsection{Zifro}
+\subsubsection{Chatbotten}
+\paragraph{Datatyper}
+\begin{itemize}
+\item Strängar
+\item Integraler
+\item Double/Float
+\item Boolean
+\end{itemize}
+\subsubsection{Miniräknare}
+
+\begin{python}[language=Python, caption=while-loop]
+go = True
+
+while(go):
+    print(foo) 
+\end{python}
+
+
+\section{Lektion 3}
+\subsection{Repitition}
+
+\subsection{Zifro}
+\subsubsection{Talföljder}
+\subsubsection{Delbarhet}
+
+
+
+\section{Lektion 4}
+
+\subsection{Repitition}
+\subsection{Funktioner}
+\begin{python}[language=Python, caption=Funktioner]
+def exampleFunction(x, y):
+ 
+    return x+y
+
+x = 3
+y = 4
+z = exampleFunction(x, y)
+
+print(z)
+\end{python}
+\section{Lektion 5}
+\subsection{Repitition}
+\section{Lektion 6}
+\subsection{Repitition}
+\section{Lektion 7}
+\subsection{Repitition}
+\section{Lektion 8}
+\subsection{Repitition}
+\section{Lektion 9}
+\section{Lektion 10}
+\section{Extra uppgifter}
+%
+\end{document}
